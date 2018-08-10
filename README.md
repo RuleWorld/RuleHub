@@ -5,3 +5,5 @@ Model name| Description
 [Faeder2003](Published/Faeder2003)  | Model of early events in FcεRI signaling, including Lyn recruitment and Syk activation. 
 
 ## Contributed models
+
+For instructions on adding new models to the repo, see [AddingModels.md](AddingModels.md).
