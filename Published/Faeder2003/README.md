@@ -9,3 +9,5 @@ Model of early events in FcεRI signaling, including Lyn recruitment and Syk act
 
 ## Files
 *[fceri.bngl](fceri.bngl) - Base model.
+
+## Notes
