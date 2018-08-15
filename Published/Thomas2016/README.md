@@ -8,20 +8,20 @@ Thomas2016
 Benchmark fitting problems published in conjunction with BioNetFit v1.0
 
 ## Files
-*[example1_fit.bngl](example1_fit.bngl) - A model of EGFR signaling, adapted from Kozer et al. (2013), simulated with ODEs.
-*[example1_BNFfiles](example1_BNFfiles) - Files needed to fit example1 in BioNetFit v1.0.1
-*[example2_fit.bngl](example2_fit.bngl) - A model of EGFR signaling, adapted from Kozer et al. (2013), simulated with NFsim.
-*[example2_BNFfiles](example2_BNFfiles) - Files needed to fit example2 in BioNetFit v1.0.1
-*[example3_fit.bngl](example3_fit.bngl) - A model of trivalent ligand, bivalent receptor, adapted from Monine et al. (2010). 
-*[example3_BNFfiles](example3_BNFfiles) - Files needed to fit example3 in BioNetFit v1.0.1
-*[example4_fit.bngl](example4_fit.bngl) - A model of TCR signaling 
-*[example4_BNFfiles](example4_BNFfiles) - Files needed to fit example4 in BioNetFit v1.0.1
-*[example5_fit.bngl](example5_fit.bngl) - A small, synthetic receptor model, simulated with ODEs
-*[example5_groundtruth.bngl](example5_groundtruth.bngl) - The ground truth parameter values used to generate synthetic data for this example.
-*[example5_BNFfiles](example5_BNFfiles) - Files needed to fit example5 in BioNetFit v1.0.1
-*example6_fit.bngl - A small, synthetic receptor model, simulated with NFsim (missing file)
-*[example6_groundtruth.bngl](example6_groundtruth.bngl) - The ground truth parameter values used to generate synthetic data for this example.
-*[example6_BNFfiles](example6_BNFfiles) - Files needed to fit example6 in BioNetFit v1.0.1
+* [example1_fit.bngl](example1_fit.bngl) - A model of EGFR signaling, adapted from Kozer et al. (2013), simulated with ODEs.
+* [example1_BNFfiles](example1_BNFfiles) - Files needed to fit example1 in BioNetFit v1.0.1
+* [example2_fit.bngl](example2_fit.bngl) - A model of EGFR signaling, adapted from Kozer et al. (2013), simulated with NFsim.
+* [example2_BNFfiles](example2_BNFfiles) - Files needed to fit example2 in BioNetFit v1.0.1
+* [example3_fit.bngl](example3_fit.bngl) - A model of trivalent ligand, bivalent receptor, adapted from Monine et al. (2010). 
+* [example3_BNFfiles](example3_BNFfiles) - Files needed to fit example3 in BioNetFit v1.0.1
+* [example4_fit.bngl](example4_fit.bngl) - A model of TCR signaling 
+* [example4_BNFfiles](example4_BNFfiles) - Files needed to fit example4 in BioNetFit v1.0.1
+* [example5_fit.bngl](example5_fit.bngl) - A small, synthetic receptor model, simulated with ODEs
+* [example5_groundtruth.bngl](example5_groundtruth.bngl) - The ground truth parameter values used to generate synthetic data for this example.
+* [example5_BNFfiles](example5_BNFfiles) - Files needed to fit example5 in BioNetFit v1.0.1
+* example6_fit.bngl - A small, synthetic receptor model, simulated with NFsim (missing file)
+* [example6_groundtruth.bngl](example6_groundtruth.bngl) - The ground truth parameter values used to generate synthetic data for this example.
+* [example6_BNFfiles](example6_BNFfiles) - Files needed to fit example6 in BioNetFit v1.0.1
 
 ## Notes
 
