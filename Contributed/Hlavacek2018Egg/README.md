@@ -10,6 +10,6 @@ A simple implementation of an egg-shaped curve in BNGL, used to demonstrate the 
     * [egg.bngl](BioNetFit_files/egg.bngl) - Model file with free parameters
     * [egg.exp](BioNetFit_files/egg.exp) - Data file for fitting
     * [egg.conf](BioNetFit_files/egg.conf) - BioNetFit configuration file
-    * [egg_bootstrap](BioNetFit_files/egg_boostrap.conf) - Configuration file for performing bootstrapping
+    * [egg_bootstrap.conf](BioNetFit_files/egg_bootstrap.conf) - Configuration file for performing bootstrapping
 
 ## Notes
