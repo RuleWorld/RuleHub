@@ -8,7 +8,7 @@ Dolan2015
 An integrated stochastic model of DNA damage repair by non-homologous end joining and of gamma irradiation-induced cellular senescence in human cells that are not apoptosis-prone, which successfully explains the changes that occur in the dynamics of DNA damage repair after irradiation.
 
 ## Files
-*[Dolan2015.bngl](Dolan.bngl) - Base model set up to run using NFsim.
+* [Dolan2015.bngl](Dolan.bngl) - Base model set up to run using NFsim.
 
 ## Curator
 James Faeder
