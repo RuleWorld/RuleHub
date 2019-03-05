@@ -10,6 +10,7 @@ Model name| Description
 --------- | ---------
 [Hlavacek2018Egg](Contributed/Hlavacek2018Egg) | Benchmark parameter fitting problem consisting of a simple egg-shaped curve.
 [Hlavacek2018Elephant](Contributed/Hlavacek2018Elephant)  | Benchmark parameter fitting problem consisting of an elephant-shaped curve.
+[Mitra2019](Contributed/Mitra2019) | Suite of benchmark parameter fitting problems for PyBioNetFit
 
 
 For instructions on adding new models to the repo, see [AddingModels.md](AddingModels.md).

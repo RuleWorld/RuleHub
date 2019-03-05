@@ -1,0 +1,202 @@
+# EGFR model
+# Blinov et al. 2006. Biosystems, 83:136
+
+begin parameters
+km10__FREE 0.23200945193518177
+km11__FREE 0.0037418509586762544
+km12__FREE 0.004779964842374529
+km13__FREE 0.05897082415837653
+km14__FREE 0.17862915398965606
+km15__FREE 0.37997518534155567
+km16__FREE 0.004627612932358862
+km17__FREE 0.18947825595639936
+km18__FREE 0.001858562649899235
+km19__FREE 0.05030084123460727
+km1__FREE 0.00896511011327787
+km20__FREE 0.01232786651094415
+km21__FREE 5.93122155216716
+km22__FREE 3.0106058117862737
+km23__FREE 0.04508406145431738
+km24__FREE 1.5673793731173573
+km2__FREE 1.4070899173256963
+km3__FREE 1.9832169701264237
+km9__FREE 0.174702454757999
+kp10__FREE 1.3701773552452904e-08
+kp11__FREE 4.499326709152015e-06
+kp12__FREE 4.583432869987683e-08
+kp13__FREE 1.9859432928111157e-05
+kp14__FREE 3.170910855044285
+kp15__FREE 9.525819633913836e-08
+kp17__FREE 4.062767386804617e-08
+kp18__FREE 3.319339008341318e-08
+kp19__FREE 8.57207879452105e-08
+kp1__FREE 2.854131107218696e-05
+kp20__FREE 3.691746282219244e-08
+kp21__FREE 1.8264650901691476e-08
+kp22__FREE 1.7324131175055443e-05
+kp23__FREE 3.772380116112273e-08
+kp24__FREE 3.186161696973758e-05
+kp2__FREE 7.518778312424535e-05
+kp3__FREE 0.20719177303646655
+kp9__FREE 3.899724719086706e-08
+egf_tot      1.2e6
+egfr_tot     1.8e5
+Grb2_tot     1.0e5
+Shc_tot      2.7e5
+Sos_tot      1.3e4
+Grb2_Sos_tot  4.9e4
+
+kp1      kp1__FREE # ligand-monomer binding  (scaled)
+km1           km1__FREE # ligand-monomer dissociation
+
+kp2      kp2__FREE # aggregation of bound monomers (scaled)
+km2            km2__FREE # dissociation of bound monomers
+
+kp3            kp3__FREE # dimer transphosphorylation
+km3          km3__FREE # dimer dephosphorylation
+
+kp14             kp14__FREE # Shc transphosphorylation
+km14          km14__FREE # Shc dephosphorylation
+
+km16         km16__FREE # Shc cytosolic dephosphorylation
+
+kp9      kp9__FREE # binding of Grb2 to receptor     (scaled)
+km9           km9__FREE # dissociation of Grb2 from receptor
+
+kp10     kp10__FREE # binding of Sos to receptor    (scaled)
+km10          km10__FREE # dissociation of Sos from receptor
+
+kp11      kp11__FREE # binding of Grb2-Sos to receptor     (scaled)
+km11          km11__FREE # diss. of Grb2-Sos from receptor
+
+kp13       kp13__FREE # binding of Shc to  receptor    (scaled)
+km13           km13__FREE # diss. of Shc from  receptor
+
+kp15       kp15__FREE # binding of ShcP to  receptor     (scaled)
+km15           km15__FREE # diss. of ShcP from  receptor
+
+kp17     kp17__FREE # binding of Grb2 to RP-ShcP  (scaled)
+km17           km17__FREE # diss. of Grb2 from RP-ShcP
+
+kp18       kp18__FREE # binding of ShcP-Grb2 to receptor    (scaled)
+km18           km18__FREE # diss. of ShcP-Grb2 from  receptor
+
+kp19     kp19__FREE # binding of Sos to RP-ShcP-Grb2  (scaled)
+km19        km19__FREE # diss. of Sos from RP-ShcP-Grb2
+
+kp20     kp20__FREE # binding of ShcP-Grb2-Sos to receptor    (scaled)
+km20          km20__FREE # diss. of ShcP-Grb2-Sos from receptor
+
+kp24         kp24__FREE # binding of Grb2-Sos to RP-ShcP    (scaled)
+km24        km24__FREE # diss. of Grb2-Sos from RP-ShcP
+
+kp21     kp21__FREE # binding of ShcP to Grb2 in cytosol (scaled)
+km21          km21__FREE # diss. of Grb2 and SchP in cytosol
+
+kp23     kp23__FREE # binding of ShcP to Grb2-Sos in cytosol (scaled)
+km23     km23__FREE # diss. of Grb2-Sos and SchP in cytosol
+
+kp12     kp12__FREE # binding of Grb2 to Sos in cytosol (scaled)
+km12     km12__FREE # diss. of Grb2 and Sos in cytosol
+
+kp22     kp22__FREE # binding of ShcP-Grb2 to Sos in cytosol (scaled)
+km22     km22__FREE # diss. of ShcP-Grb2 and Sos in cytosol
+
+end parameters
+
+begin molecule types
+egf(r)
+Grb2(SH2,SH3)
+Shc(PTB,Y317~Y~pY)
+Sos(dom)
+egfr(l,r,Y1068~Y~pY,Y1148~Y~pY)
+end molecule types
+
+
+begin species
+
+egf(r)                           egf_tot
+Grb2(SH2,SH3)                    Grb2_tot
+Shc(PTB,Y317~Y)                  Shc_tot
+Sos(dom)                         Sos_tot
+egfr(l,r,Y1068~Y,Y1148~Y)        egfr_tot
+Grb2(SH2,SH3!1).Sos(dom!1)      Grb2_Sos_tot
+end species
+
+
+begin reaction rules
+
+# Ligand-receptor binding
+egfr(l,r)   + egf(r) <-> egfr(l!1,r).egf(r!1)   kp1, km1   #ligand-monomer
+
+# Note changed multiplicity
+# Receptor-aggregation
+egfr(l!+,r) + egfr(l!+,r) <-> egfr(l!+,r!3).egfr(l!+,r!3) kp2,km2
+
+# Transphosphorylation of egfr by RTK
+egfr(r!+,Y1068~Y) -> egfr(r!+,Y1068~pY)  kp3
+egfr(r!+,Y1148~Y) -> egfr(r!+,Y1148~pY)  kp3
+
+#Dephosphorylayion
+egfr(Y1068~pY) -> egfr(Y1068~Y)  km3
+egfr(Y1148~pY) -> egfr(Y1148~Y)  km3
+
+# Shc transphosph
+
+egfr(r!+,Y1148~pY!1).Shc(PTB!1,Y317~Y) ->  egfr(r!+,Y1148~pY!1).Shc(PTB!1,Y317~pY)  kp14
+Shc(PTB!+,Y317~pY)  ->  Shc(PTB!+,Y317~Y)  km14
+
+
+# Y1068 activity
+egfr(Y1068~pY) + Grb2(SH2,SH3)   <-> egfr(Y1068~pY!1).Grb2(SH2!1,SH3)   kp9,km9
+egfr(Y1068~pY) + Grb2(SH2,SH3!+) <-> egfr(Y1068~pY!1).Grb2(SH2!1,SH3!+) kp11,km11
+egfr(Y1068~pY!1).Grb2(SH2!1,SH3) + Sos(dom) <-> egfr(Y1068~pY!1).Grb2(SH2!1,SH3!2).Sos(dom!2) kp10,km10
+
+# Y1148 activity
+
+egfr(Y1148~pY) + Shc(PTB,Y317~Y)    <-> egfr(Y1148~pY!1).Shc(PTB!1,Y317~Y)   kp13,km13
+egfr(Y1148~pY) + Shc(PTB,Y317~pY)   <-> egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY)  kp15,km15
+egfr(Y1148~pY) + Shc(PTB,Y317~pY!1).Grb2(SH2!1,SH3)   <-> egfr(Y1148~pY!2).Shc(PTB!2,Y317~pY!1).Grb2(SH2!1,SH3)  kp18,km18
+egfr(Y1148~pY) + Shc(PTB,Y317~pY!1).Grb2(SH2!1,SH3!3).Sos(dom!3)   <-> egfr(Y1148~pY!2).Shc(PTB!2,Y317~pY!1).Grb2(SH2!1,SH3!3).Sos(dom!3)  kp20,km20
+
+egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY) + Grb2(SH2,SH3)   <-> egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY!2).Grb2(SH2!2,SH3)  kp17,km17
+
+egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY) + Grb2(SH2,SH3!3).Sos(dom!3)   <-> egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY!2).Grb2(SH2!2,SH3!3).Sos(dom!3)  kp24,km24
+
+Shc(PTB!+,Y317~pY!2).Grb2(SH2!2,SH3) + Sos(dom)   <-> Shc(PTB!+,Y317~pY!2).Grb2(SH2!2,SH3!3).Sos(dom!3)  kp19,km19
+
+# Cytosolic
+
+Shc(PTB,Y317~pY) + Grb2(SH2,SH3)   <-> Shc(PTB,Y317~pY!1).Grb2(SH2!1,SH3)    kp21,km21
+Shc(PTB,Y317~pY) + Grb2(SH2,SH3!+) <-> Shc(PTB,Y317~pY!1).Grb2(SH2!1,SH3!+)  kp23,km23
+Shc(PTB,Y317~pY) -> Shc(PTB,Y317~Y)  km16
+Grb2(SH2,SH3) + Sos(dom) <-> Grb2(SH2,SH3!1).Sos(dom!1) kp12,km12
+Shc(PTB,Y317~pY!2).Grb2(SH2!2,SH3) + Sos(dom)   <-> Shc(PTB,Y317~pY!2).Grb2(SH2!2,SH3!3).Sos(dom!3)  kp22,km22
+
+
+end reaction rules
+
+begin observables
+Molecules     Dimers		egfr().egfr()
+Molecules     Sos_act		Shc(PTB!+,Y317~pY!2).Grb2(SH2!2,SH3!3).Sos(dom!3) egfr(Y1068~pY!1).Grb2(SH2!1,SH3!2).Sos(dom!2)
+Molecules     Y1068 		egfr(Y1068~pY) egfr(Y1068~pY!+)
+Molecules     Y1148		egfr(Y1148~pY) egfr(Y1148~pY!+)
+Molecules     Shc_Grb		Shc(Y317~pY!1).Grb2(SH2!1)
+Molecules     Shc_Grb_Sos	Shc(Y317~pY!1).Grb2(SH2!1,SH3!2).Sos(dom!2)
+Molecules     R_Grb2		egfr(Y1068~pY!1).Grb2(SH2!1)
+Molecules     R_Shc		egfr(Y1148~pY!1).Shc(PTB!1,Y317~Y)
+Molecules     R_ShcP		egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY!?)
+Molecules     ShcP              Shc(Y317~pY!?)
+Molecules     R_G_S             egfr(Y1068~pY!1).Grb2(SH2!1,SH3!2).Sos(dom!2)
+Molecules     R_S_G_S           egfr(Y1148~pY!1).Shc(PTB!1,Y317~pY!2).Grb2(SH2!2,SH3!3).Sos(dom!3)
+Molecules     Efgr_tot    egfr()
+end observables
+
+#simulate_rm({t_end=>120,n_steps=>120});
+#writeSBML();
+
+begin actions
+
+generate_network({overwrite=>1});
+simulate({method=>"ode",t_start=>0,t_end=>100,n_steps=>10,suffix=>"egfr"});
+end actions

@@ -1,0 +1,10 @@
+data.x5_AV > data_w2.x5_AV between 120,240
+data.x5_AV > data_w3.x5_AV between 120,240
+data.x5_AV > data_w4.x5_AV between 120,240
+data.x5_AV > data_w6.x5_AV between 120,240
+data_med.x5_AV < data_med_w1.x5_AV between 120,240
+data_med.x5_AV > data_med_w2.x5_AV between 120,240
+data_med.x5_AV > data_med_w3.x5_AV between 120,240
+data_med.x5_AV > data_med_w4.x5_AV between 120,240
+data_med.x5_AV < data_med_w5.x5_AV between 120,240
+data_med.x5_AV > data_med_w6.x5_AV between 120,240

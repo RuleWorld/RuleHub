@@ -1,0 +1,344 @@
+Start time 
+Fri Nov 30 10:43:48 MST 2018
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+                   R2018a (9.4.0.813654) 64-bit (glnxa64)
+                             February 23, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Downloading submodule "matlab2tikz" from github... done!
+Downloading submodule "parfor_progress" from github... done!
+Downloading submodule "plot2svg" from github... done!
+Downloading submodule "export_fig" from github... done!
+Downloading submodule "Ceres/ceres-solver" from github... done!
+Downloading submodule "NL2SOL" from github... done!
+[Warning: Name is nonexistent or not a directory:
+/home/emitra/d2d/d2d/arFramework3/ThirdParty/matlab2tikz/src] 
+[> In path (line 109)
+  In addpath (line 96)
+  In arCheck (line 154)
+  In arInit (line 11)
+  In Setup_Zheng (line 5)] 
+[Warning: Unable to save path to file
+'/projects/opt/matlab/R2018a/toolbox/local/pathdef.m'. You can save your path
+to a different location by calling SAVEPATH with an input argument that
+specifies the full path. For MATLAB to use that path in future sessions, save
+the path to 'pathdef.m' in your MATLAB startup folder.] 
+[> In savepath (line 176)
+  In arCheck (line 181)
+  In arInit (line 11)
+  In Setup_Zheng (line 5)] 
+Data 2 Dynamics Software
+(arFramework3, def-version 3, c-version code_180926b)
+Website: http://www.data2dynamics.org
+Contact: Andreas Raue - andreas.raue@fdm.uni-freiburg.de
+Copyright 2016 D2D Development Team. All rights reserved.
+
+Clearing old D2D mex files from memory  [OK]
+[Warning: Could not connect to github. Version checking cancelled.] 
+[> In arCheckVersion (line 45)
+  In arInit (line 43)
+  In Setup_Zheng (line 5)] 
+loading model #1, from file Models/ModelHistoneZheng.def...
+
+loading data #1, from file Data/MethylationData_aggregated_NTKO.def...
+loading data #1, from file Data/MethylationData_aggregated_NTKO.xlsx...
+	    K27me0K36me0_obs ->    4 data-points assigned
+	    K27me0K36me1_obs ->    4 data-points assigned
+	    K27me1K36me0_obs ->    4 data-points assigned
+	    K27me0K36me2_obs ->    4 data-points assigned
+	    K27me1K36me1_obs ->    4 data-points assigned
+	    K27me2K36me0_obs ->    4 data-points assigned
+	    K27me0K36me3_obs ->    4 data-points assigned
+	    K27me1K36me2_obs ->    4 data-points assigned
+	    K27me2K36me1_obs ->    4 data-points assigned
+	    K27me3K36me0_obs ->    4 data-points assigned
+	    K27me1K36me3_obs ->    4 data-points assigned
+	    K27me2K36me2_obs ->    4 data-points assigned
+	    K27me3K36me1_obs ->    4 data-points assigned
+	    K27me2K36me3_obs ->    4 data-points assigned
+	    K27me3K36me2_obs ->    4 data-points assigned
+
+calculating model m1, ModelHistoneZheng...
+calculating condition m1 c1, ModelHistoneZheng...
+ -> writing condition m1 c1, ModelHistoneZheng...
+calculating data m1 d1 -> c1, MethylationData_aggregated_NTKO...
+ -> writing data m1 d1 -> c1, MethylationData_aggregated_NTKO...
+Compiling files...
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(SuiteSparse_config.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_analyze.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_analyze_given.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_defaults.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_diagnostics.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_dump.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_extract.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_factor.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_free_numeric.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_free_symbolic.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_kernel.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_memory.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_refactor.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_scale.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_solve.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_sort.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(klu_tsolve.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_1.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_2.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_aat.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_control.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_defaults.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_dump.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_global.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_info.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_order.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_post_tree.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_postorder.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_preprocess.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(amd_valid.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(btf_maxtrans.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(btf_order.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(btf_strongcomp.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(colamd.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling KLU(colamd_global.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_band.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_bandpre.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_bbdpre.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_direct.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_dense.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_klu.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_sparse.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_diag.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodea.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_io.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodea_io.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_spils.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_spbcgs.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_spgmr.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(cvodes_sptfqmr.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_band.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_dense.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_sparse.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_iterative.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_nvector.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_direct.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_spbcgs.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_spgmr.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_sptfqmr.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(sundials_math.o)...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling CVODES(nvector_serial.o)...done
+Building with 'gcc'.
+/home/emitra/d2d/d2d/arFramework3/Ccode/arInputFunctionsC.c: In function ‘splineFixCoeffs’:
+/home/emitra/d2d/d2d/arFramework3/Ccode/arInputFunctionsC.c:147:12: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     deriv2 = &data[n];
+            ^
+
+MEX completed successfully.
+compiling input functions...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling condition m1 c1, ModelHistoneZheng_328C60CF4F70D0F214FDF3F360B70A15.c...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling data m1 d1, MethylationData_aggregated_NTKO_BCBEAC48C92E31AC7BAFD98184BC3AEF.c...done
+Building with 'gcc'.
+MEX completed successfully.
+compiling and linking arSimuCalcFun_97436FBF02191B423F6E141618AB74D4...done
+
+linking model...
+linking time points...
+linking parameters...
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+1 input events assigned!
+Setting up steady state for model 1
+Number of steady state equilibrations: 1
+[Warning: ar.config.fiterrors_correction_warning : turning off bias correction,
+not enough data] 
+[> In arCalcRes (line 60)
+  In arSimu (line 263)
+  In arCalcMerit (line 131)
+  In arFit (line 138)
+  In Setup_Zheng (line 12)] 
+The model(s) loaded are incompatible with the stored stack. Stack invalidated.
+lsqnonlin finished after 1001 iterations: Too many function evaluations or iterations, total improvement = 571.016
+-2*log(L) = -555.058, 60 data points, 46 free parameters, data chi^2 = 59.9534
+Parameters: # = free, C = constant, D = dynamic, I = initial value, E = error model
+
+           name      lb       value       ub          10^value        fitted   prior
+#   1|D  | inflowp |       -5       -1.6         +3 | 1     +0.027 |       1 | uniform(-5,3) 
+#   2|D  | k00_01  |       -5       +1.2         +3 | 1        +16 |       1 | uniform(-5,3) 
+#   3|D  | k00_10  |       -5       -0.9         +3 | 1      +0.13 |       1 | uniform(-5,3) 
+#   4|D  | k01_00  |       -5      +0.73         +3 | 1       +5.4 |       1 | uniform(-5,3) 
+#   5|D  | k01_02  |       -5      +0.27         +3 | 1       +1.9 |       1 | uniform(-5,3) 
+#   6|D  | k01_11  |       -5      +0.36         +3 | 1       +2.3 |       1 | uniform(-5,3) 
+#   7|D  | k02_01  |       -5       -1.1         +3 | 1     +0.075 |       1 | uniform(-5,3) 
+#   9|D  | k02_12  |       -5       -4.2         +3 | 1   +5.8e-05 |       1 | uniform(-5,3) 
+     |   |         |                                |              |         |      
+#  11|D  | k03_13  |       -5       +1.3         +3 | 1        +21 |       1 | uniform(-5,3) 
+#  12|D  | k10_00  |       -5       -2.4         +3 | 1    +0.0038 |       1 | uniform(-5,3) 
+#  14|D  | k10_20  |       -5      -0.77         +3 | 1      +0.17 |       1 | uniform(-5,3) 
+#  17|D  | k11_12  |       -5         +1         +3 | 1        +10 |       1 | uniform(-5,3) 
+#  18|D  | k11_21  |       -5       -4.4         +3 | 1   +3.9e-05 |       1 | uniform(-5,3) 
+#  20|D  | k12_11  |       -5         -1         +3 | 1     +0.093 |       1 | uniform(-5,3) 
+     |   |         |                                |              |         |      
+#  21|D  | k12_13  |       -5       -1.6         +3 | 1     +0.028 |       1 | uniform(-5,3) 
+#  22|D  | k12_22  |       -5       -1.8         +3 | 1     +0.014 |       1 | uniform(-5,3) 
+#  23|D  | k13_03  |       -5      +0.97         +3 | 1       +9.4 |       1 | uniform(-5,3) 
+#  24|D  | k13_12  |       -5      -0.73         +3 | 1      +0.18 |       1 | uniform(-5,3) 
+#  28|D  | k20_30  |       -5       -1.2         +3 | 1     +0.056 |       1 | uniform(-5,3) 
+#  29|D  | k21_11  |       -5       -2.8         +3 | 1    +0.0017 |       1 | uniform(-5,3) 
+#  30|D  | k21_20  |       -5       -2.4         +3 | 1    +0.0044 |       1 | uniform(-5,3) 
+     |   |         |                                |              |         |      
+#  31|D  | k21_22  |       -5      +0.94         +3 | 1       +8.7 |       1 | uniform(-5,3) 
+#  32|D  | k21_31  |       -5     -0.077         +3 | 1      +0.84 |       1 | uniform(-5,3) 
+#  33|D  | k22_12  |       -5       -1.9         +3 | 1     +0.013 |       1 | uniform(-5,3) 
+#  34|D  | k22_21  |       -5      +0.61         +3 | 1       +4.1 |       1 | uniform(-5,3) 
+#  35|D  | k22_23  |       -5      -0.59         +3 | 1      +0.26 |       1 | uniform(-5,3) 
+#  36|D  | k22_32  |       -5      -0.28         +3 | 1      +0.53 |       1 | uniform(-5,3) 
+#  37|D  | k23_13  |       -5      +0.13         +3 | 1       +1.4 |       1 | uniform(-5,3) 
+#  38|D  | k23_22  |       -5       -4.8         +3 | 1   +1.7e-05 |       1 | uniform(-5,3) 
+#  40|D  | k30_31  |       -5      -0.63         +3 | 1      +0.23 |       1 | uniform(-5,3) 
+     |   |         |                                |              |         |      
+#  41|D  | k31_21  |       -5       -1.1         +3 | 1     +0.072 |       1 | uniform(-5,3) 
+#  42|D  | k31_30  |       -5      -0.75         +3 | 1      +0.18 |       1 | uniform(-5,3) 
+#  43|D  | k31_32  |       -5       +0.7         +3 | 1         +5 |       1 | uniform(-5,3) 
+#  44|D  | k32_22  |       -5       +1.3         +3 | 1        +20 |       1 | uniform(-5,3) 
+#  45|D  | k32_31  |       -5     +0.098         +3 | 1       +1.3 |       1 | uniform(-5,3) 
+#  46|  E| noise   |       -5       -2.6         +3 | 1    +0.0024 |       1 | uniform(-5,3) 
+-2*log(L) = -555.055, 60 data points, 46 free parameters, data chi^2 = 59.9567
+End time 
+Fri Nov 30 10:47:58 MST 2018
