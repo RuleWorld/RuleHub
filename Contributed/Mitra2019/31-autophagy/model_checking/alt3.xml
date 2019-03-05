@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by COPASI version 4.22 (Build 170) on 2018-12-12 09:09 with libSBML version 5.15.3. -->
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="COPASI0" id="New_Model" name="New Model">
+    <annotation>
+      <COPASI xmlns="http://www.copasi.org/static/sbml">
+        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="#COPASI0">
+            <dcterms:created>
+              <rdf:Description>
+                <dcterms:W3CDTF>2018-12-11T10:00:49Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:created>
+          </rdf:Description>
+        </rdf:RDF>
+      </COPASI>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition metaid="COPASI11" id="rate_x5" name="rate_x5">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI11">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:48:36Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k3 </ci>
+            </bvar>
+            <bvar>
+              <ci> x4 </ci>
+            </bvar>
+            <bvar>
+              <ci> k4 </ci>
+            </bvar>
+            <bvar>
+              <ci> x5 </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k3 </ci>
+                <ci> x4 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k4 </ci>
+                <ci> x5 </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI12" id="drug_hill" name="drug_hill">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI12">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:24:55Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> rm </ci>
+            </bvar>
+            <bvar>
+              <ci> rb </ci>
+            </bvar>
+            <bvar>
+              <ci> wi </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> theta </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <ci> rm </ci>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> wi </ci>
+                    <ci> n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> wi </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> theta </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI13" id="species_hill" name="species_hill">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI13">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:22:35Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> rb_ji </ci>
+            </bvar>
+            <bvar>
+              <ci> rm_ji </ci>
+            </bvar>
+            <bvar>
+              <ci> xi </ci>
+            </bvar>
+            <bvar>
+              <ci> nji </ci>
+            </bvar>
+            <bvar>
+              <ci> theta_ji </ci>
+            </bvar>
+            <apply>
+              <plus/>
+              <ci> rb_ji </ci>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> rm_ji </ci>
+                  <ci> rb_ji </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> xi </ci>
+                    <ci> nji </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> xi </ci>
+                      <ci> nji </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> theta_ji </ci>
+                      <ci> nji </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI14" id="rate_x1B" name="rate_x1B">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI14">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:26:33Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> x1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Cnu </ci>
+            </bvar>
+            <bvar>
+              <ci> rm </ci>
+            </bvar>
+            <bvar>
+              <ci> rb </ci>
+            </bvar>
+            <bvar>
+              <ci> w1 </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> theta </ci>
+            </bvar>
+            <bvar>
+              <ci> w2 </ci>
+            </bvar>
+            <bvar>
+              <ci> rb12 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm12 </ci>
+            </bvar>
+            <bvar>
+              <ci> x2 </ci>
+            </bvar>
+            <bvar>
+              <ci> n12 </ci>
+            </bvar>
+            <bvar>
+              <ci> theta12 </ci>
+            </bvar>
+            <bvar>
+              <ci> rb13 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm13 </ci>
+            </bvar>
+            <bvar>
+              <ci> x3 </ci>
+            </bvar>
+            <bvar>
+              <ci> n13 </ci>
+            </bvar>
+            <bvar>
+              <ci> theta13 </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 1 </cn>
+                  <ci> x1 </ci>
+                </apply>
+                <ci> Cnu </ci>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w1 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w2 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> x1 </ci>
+                <apply>
+                  <ci> species_hill </ci>
+                  <ci> rb12 </ci>
+                  <ci> rm12 </ci>
+                  <ci> x2 </ci>
+                  <ci> n12 </ci>
+                  <ci> theta12 </ci>
+                </apply>
+                <apply>
+                  <ci> species_hill </ci>
+                  <ci> rb13 </ci>
+                  <ci> rm13 </ci>
+                  <ci> x3 </ci>
+                  <ci> n13 </ci>
+                  <ci> theta13 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI15" id="rate_x2" name="rate_x2">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI15">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:35:59Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> x2 </ci>
+            </bvar>
+            <bvar>
+              <ci> rb23 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm23 </ci>
+            </bvar>
+            <bvar>
+              <ci> x3 </ci>
+            </bvar>
+            <bvar>
+              <ci> n23 </ci>
+            </bvar>
+            <bvar>
+              <ci> theta23 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm </ci>
+            </bvar>
+            <bvar>
+              <ci> rb </ci>
+            </bvar>
+            <bvar>
+              <ci> w3 </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> theta </ci>
+            </bvar>
+            <bvar>
+              <ci> rb21 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm21 </ci>
+            </bvar>
+            <bvar>
+              <ci> x1 </ci>
+            </bvar>
+            <bvar>
+              <ci> n21 </ci>
+            </bvar>
+            <bvar>
+              <ci> theta21 </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 1 </cn>
+                  <ci> x2 </ci>
+                </apply>
+                <apply>
+                  <ci> species_hill </ci>
+                  <ci> rb23 </ci>
+                  <ci> rm23 </ci>
+                  <ci> x3 </ci>
+                  <ci> n23 </ci>
+                  <ci> theta23 </ci>
+                </apply>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w3 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> x2 </ci>
+                <apply>
+                  <ci> species_hill </ci>
+                  <ci> rb21 </ci>
+                  <ci> rm21 </ci>
+                  <ci> x1 </ci>
+                  <ci> n21 </ci>
+                  <ci> theta21 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI16" id="rate_x3" name="rate_x3">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI16">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:38:13Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> x3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k1 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm </ci>
+            </bvar>
+            <bvar>
+              <ci> rb </ci>
+            </bvar>
+            <bvar>
+              <ci> w4 </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> theta </ci>
+            </bvar>
+            <bvar>
+              <ci> Cen </ci>
+            </bvar>
+            <bvar>
+              <ci> x2 </ci>
+            </bvar>
+            <bvar>
+              <ci> w5 </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 1 </cn>
+                  <ci> x3 </ci>
+                </apply>
+                <ci> k1 </ci>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w4 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Cen </ci>
+                <ci> x2 </ci>
+                <ci> x3 </ci>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w5 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="COPASI17" id="rate_x4" name="rate_x4">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI17">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:46:41Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> x4 </ci>
+            </bvar>
+            <bvar>
+              <ci> rb42 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm42 </ci>
+            </bvar>
+            <bvar>
+              <ci> x2 </ci>
+            </bvar>
+            <bvar>
+              <ci> n42 </ci>
+            </bvar>
+            <bvar>
+              <ci> theta42 </ci>
+            </bvar>
+            <bvar>
+              <ci> rm </ci>
+            </bvar>
+            <bvar>
+              <ci> rb </ci>
+            </bvar>
+            <bvar>
+              <ci> w2 </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> theta </ci>
+            </bvar>
+            <bvar>
+              <ci> w6 </ci>
+            </bvar>
+            <bvar>
+              <ci> k2 </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 1 </cn>
+                  <ci> x4 </ci>
+                </apply>
+                <apply>
+                  <ci> species_hill </ci>
+                  <ci> rb42 </ci>
+                  <ci> rm42 </ci>
+                  <ci> x2 </ci>
+                  <ci> n42 </ci>
+                  <ci> theta42 </ci>
+                </apply>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w2 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+                <apply>
+                  <ci> drug_hill </ci>
+                  <ci> rm </ci>
+                  <ci> rb </ci>
+                  <ci> w6 </ci>
+                  <ci> n </ci>
+                  <ci> theta </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k2 </ci>
+                <ci> x4 </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="compartment" name="compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="COPASI1" id="x2_ULK1" name="x2_ULK1" compartment="compartment" initialConcentration="0.831" boundaryCondition="false" constant="false">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI1">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:40:26Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </species>
+      <species id="x3_AMPK" name="x3_AMPK" compartment="compartment" initialConcentration="0.546" boundaryCondition="false" constant="false"/>
+      <species id="x4_VPS34" name="x4_VPS34" compartment="compartment" initialConcentration="0.947" boundaryCondition="false" constant="false"/>
+      <species id="x5_AV" name="x5_AV" compartment="compartment" initialConcentration="37.9" boundaryCondition="false" constant="false"/>
+      <species metaid="COPASI2" id="x1_MTORC1" name="x1_MTORC1" compartment="compartment" initialConcentration="0.0028" boundaryCondition="false" constant="false">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI2">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:40:11Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </species>
+      <species metaid="COPASI3" id="total_drug" name="total_drug" compartment="compartment" initialConcentration="0" boundaryCondition="true" constant="false">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI3">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T15:23:36Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="CNu" name="CNu" value="0.1" constant="true"/>
+      <parameter metaid="COPASI4" id="CEn" name="CEn" value="0.1" constant="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI4">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:21:29Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </parameter>
+      <parameter id="w1" name="w1" value="0" constant="true"/>
+      <parameter id="w2" name="w2" value="0" constant="true"/>
+      <parameter id="w3" name="w3" value="0" constant="true"/>
+      <parameter id="w4" name="w4" value="0" constant="true"/>
+      <parameter id="w5" name="w5" value="0" constant="true"/>
+      <parameter id="w6" name="w6" value="0" constant="true"/>
+      <parameter id="rb12" name="rb12" value="0" constant="true"/>
+      <parameter id="rm12" name="rm12" value="10" constant="true"/>
+      <parameter id="theta12" name="theta12" value="0.3" constant="true"/>
+      <parameter id="n12" name="n12" value="4" constant="true"/>
+      <parameter id="rb13" name="rb13" value="0" constant="true"/>
+      <parameter id="rm13" name="rm13" value="10" constant="true"/>
+      <parameter id="theta13" name="theta13" value="0.6" constant="true"/>
+      <parameter id="n13" name="n13" value="6" constant="true"/>
+      <parameter id="rb23" name="rb23" value="0" constant="true"/>
+      <parameter id="rm23" name="rm23" value="6" constant="true"/>
+      <parameter id="theta23" name="theta23" value="1" constant="true"/>
+      <parameter id="n23" name="n23" value="4" constant="true"/>
+      <parameter id="rb21" name="rb21" value="0.1" constant="true"/>
+      <parameter id="rm21" name="rm21" value="6" constant="true"/>
+      <parameter id="theta21" name="theta21" value="0.6" constant="true"/>
+      <parameter metaid="COPASI5" id="n21" name="n21" value="4" constant="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI5">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T11:05:57Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </parameter>
+      <parameter id="rb42" name="rb42" value="0.1" constant="true"/>
+      <parameter id="rm42" name="rm42" value="6" constant="true"/>
+      <parameter id="theta42" name="theta42" value="0.5" constant="true"/>
+      <parameter id="n42" name="n42" value="4" constant="true"/>
+      <parameter id="k1" name="k1" value="0.1" constant="true"/>
+      <parameter id="k2" name="k2" value="0.3" constant="true"/>
+      <parameter id="k3" name="k3" value="4" constant="true"/>
+      <parameter id="k4" name="k4" value="0.1" constant="true"/>
+      <parameter id="rb" name="rb" value="0" constant="true"/>
+      <parameter id="rm" name="rm" value="1" constant="true"/>
+      <parameter id="theta" name="theta" value="0.5" constant="true"/>
+      <parameter id="n" name="n" value="2" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="total_drug">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> w1 </ci>
+            <ci> w2 </ci>
+            <ci> w3 </ci>
+            <ci> w4 </ci>
+            <ci> w5 </ci>
+            <ci> w6 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="COPASI6" id="mTORC1" name="mTORC1" reversible="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI6">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:34:18Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="x1_MTORC1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="x2_ULK1"/>
+          <modifierSpeciesReference species="x3_AMPK"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> rate_x1B </ci>
+                <ci> x1_MTORC1 </ci>
+                <ci> CNu </ci>
+                <ci> rm </ci>
+                <ci> rb </ci>
+                <ci> w1 </ci>
+                <ci> n </ci>
+                <ci> theta </ci>
+                <ci> w2 </ci>
+                <ci> rb12 </ci>
+                <ci> rm12 </ci>
+                <ci> x2_ULK1 </ci>
+                <ci> n12 </ci>
+                <ci> theta12 </ci>
+                <ci> rb13 </ci>
+                <ci> rm13 </ci>
+                <ci> x3 </ci>
+                <ci> n13 </ci>
+                <ci> theta13 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="x3" name="x3" value="0.5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI7" id="ULK1" name="ULK1" reversible="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI7">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:40:48Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="x2_ULK1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="x3_AMPK"/>
+          <modifierSpeciesReference species="x1_MTORC1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> rate_x2 </ci>
+                <ci> x2_ULK1 </ci>
+                <ci> rb23 </ci>
+                <ci> rm23 </ci>
+                <ci> x3_AMPK </ci>
+                <ci> n23 </ci>
+                <ci> theta23 </ci>
+                <ci> rm </ci>
+                <ci> rb </ci>
+                <ci> w3 </ci>
+                <ci> n </ci>
+                <ci> theta </ci>
+                <ci> rb21 </ci>
+                <ci> rm21 </ci>
+                <ci> x1_MTORC1 </ci>
+                <ci> n21 </ci>
+                <ci> theta21 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI8" id="AMPK" name="AMPK" reversible="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI8">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:43:34Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="x3_AMPK" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="x2_ULK1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> rate_x3 </ci>
+                <ci> x3_AMPK </ci>
+                <ci> k1 </ci>
+                <ci> rm </ci>
+                <ci> rb </ci>
+                <ci> w4 </ci>
+                <ci> n </ci>
+                <ci> theta </ci>
+                <ci> CEn </ci>
+                <ci> x2_ULK1 </ci>
+                <ci> w5 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI9" id="VPS34" name="VPS34" reversible="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI9">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:49:45Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="x4_VPS34" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="x2_ULK1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> rate_x4 </ci>
+                <ci> x4_VPS34 </ci>
+                <ci> rb42 </ci>
+                <ci> rm42 </ci>
+                <ci> x2_ULK1 </ci>
+                <ci> n42 </ci>
+                <ci> theta42 </ci>
+                <ci> rm </ci>
+                <ci> rb </ci>
+                <ci> w2 </ci>
+                <ci> n </ci>
+                <ci> theta </ci>
+                <ci> w6 </ci>
+                <ci> k2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="COPASI10" id="AV" name="AV" reversible="true">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI10">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-12-11T10:51:30Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="x5_AV" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="x4_VPS34"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> rate_x5 </ci>
+                <ci> k3 </ci>
+                <ci> x4_VPS34 </ci>
+                <ci> k4 </ci>
+                <ci> x5_AV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

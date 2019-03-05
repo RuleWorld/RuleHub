@@ -1,0 +1,5 @@
+Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall
+4.087	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall	3.322	Wall	Wall	Wall	Wall	Wall	Wall	Wall	Wall
+1.358	0.721	2.683	5.098	3.787	Wall	3.619	Wall	1.827	3.878	Wall	1.856	5.462	1.693	3.701	1.656	2.521	2.177	1.726	2.942
+1.149	1.024	2.685	2.144	1.082	1.861	2.359	1.794	1.263	4.936	2.410	1.148	2.783	5.451	3.609	Wall	Wall	1.927	1.324	2.070
+0.541	0.868	1.626	1.933	0.365	0.778	2.710	1.233	3.044	Wall	2.783	4.175	2.373	1.286	1.783	0.905	1.062	2.024	1.425	1.781

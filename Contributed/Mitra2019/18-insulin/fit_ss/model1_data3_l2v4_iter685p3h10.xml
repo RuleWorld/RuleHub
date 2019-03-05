@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="arFramework3" id="model_Mif" name="NoName">
+    <annotation>
+      <COPASI xmlns="http://www.copasi.org/static/sbml">
+        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="#arFramework3">
+            <dcterms:created>
+              <rdf:Description>
+                <dcterms:W3CDTF>2018-09-11T12:19:22Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:created>
+          </rdf:Description>
+        </rdf:RDF>
+      </COPASI>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="Function_for_v_0" name="Function for v_0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> IR </ci>
+            </bvar>
+            <bvar>
+              <ci> insulin </ci>
+            </bvar>
+            <bvar>
+              <ci> k1a </ci>
+            </bvar>
+            <bvar>
+              <ci> k1aBasic </ci>
+            </bvar>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> IR </ci>
+                <ci> k1aBasic </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> IR </ci>
+                <ci> insulin </ci>
+                <ci> k1a </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_v_4" name="Function for v_4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> IRiP </ci>
+            </bvar>
+            <bvar>
+              <ci> XXp </ci>
+            </bvar>
+            <bvar>
+              <ci> k1e </ci>
+            </bvar>
+            <bvar>
+              <ci> k1f </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> IRiP </ci>
+              <apply>
+                <plus/>
+                <ci> k1e </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> XXp </ci>
+                    <ci> k1f </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> XXp </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_v_7" name="Function for v_7">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> IRS </ci>
+            </bvar>
+            <bvar>
+              <ci> IRiP </ci>
+            </bvar>
+            <bvar>
+              <ci> IRp </ci>
+            </bvar>
+            <bvar>
+              <ci> k21 </ci>
+            </bvar>
+            <bvar>
+              <ci> k22 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> IRS </ci>
+              <ci> k21 </ci>
+              <apply>
+                <plus/>
+                <ci> IRp </ci>
+                <apply>
+                  <times/>
+                  <ci> IRiP </ci>
+                  <ci> k22 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_v_9" name="Function for v_9">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> IRSiP </ci>
+            </bvar>
+            <bvar>
+              <ci> XX </ci>
+            </bvar>
+            <bvar>
+              <ci> k3 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> IRSiP </ci>
+              <ci> XX </ci>
+              <ci> k3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cyt" name="cyt" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="IR" name="IR" compartment="cyt" initialConcentration="9.94957642787569" boundaryCondition="false" constant="false"/>
+      <species id="IRins" name="IRins" compartment="cyt" initialConcentration="0.0173972221725393" boundaryCondition="false" constant="false"/>
+      <species id="IRp" name="IRp" compartment="cyt" initialConcentration="1.7629010620181e-09" boundaryCondition="false" constant="false"/>
+      <species id="IRiP" name="IRiP" compartment="cyt" initialConcentration="1.11590026152296e-05" boundaryCondition="false" constant="false"/>
+      <species id="IRi" name="IRi" compartment="cyt" initialConcentration="0.0330151891862681" boundaryCondition="false" constant="false"/>
+      <species id="IRS" name="IRS" compartment="cyt" initialConcentration="9.86699348701367" boundaryCondition="false" constant="false"/>
+      <species id="IRSiP" name="IRSiP" compartment="cyt" initialConcentration="0.133006512986336" boundaryCondition="false" constant="false"/>
+      <species id="XX" name="X" compartment="cyt" initialConcentration="9.99984199487351" boundaryCondition="false" constant="false"/>
+      <species id="XXp" name="Xp" compartment="cyt" initialConcentration="0.000158005126497888" boundaryCondition="false" constant="false"/>
+      <species metaid="COPASI0" id="IRS1_PO" name="IRS1_PO" compartment="cyt" initialConcentration="23.6188870430921" boundaryCondition="true" constant="false">
+        <annotation>
+          <COPASI xmlns="http://www.copasi.org/static/sbml">
+            <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+              <rdf:Description rdf:about="#COPASI0">
+                <dcterms:created>
+                  <rdf:Description>
+                    <dcterms:W3CDTF>2018-09-11T12:19:32Z</dcterms:W3CDTF>
+                  </rdf:Description>
+                </dcterms:created>
+              </rdf:Description>
+            </rdf:RDF>
+          </COPASI>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="k1a" name="k1a" value="1.0532031296423" constant="true"/>
+      <parameter id="k1aBasic" name="k1aBasic" value="0.164192622518035" constant="true"/>
+      <parameter id="k1b" name="k1b" value="2.20225283810452" constant="true"/>
+      <parameter id="k1c" name="k1c" value="1.4399035635284" constant="true"/>
+      <parameter id="k1d" name="k1d" value="273.565013803874" constant="true"/>
+      <parameter id="k1e" name="k1e" value="197.840170141671" constant="true"/>
+      <parameter id="k1f" name="k1f" value="54097.7379536026" constant="true"/>
+      <parameter id="k1g" name="k1g" value="7.15997364541587e-06" constant="true"/>
+      <parameter id="k1r" name="k1r" value="0.443764678537297" constant="true"/>
+      <parameter id="k21" name="k21" value="4.51175438136899" constant="true"/>
+      <parameter id="k22" name="k22" value="0.774512662459871" constant="true"/>
+      <parameter id="k3" name="k3" value="5.88435315111429e-05" constant="true"/>
+      <parameter id="k_IRSiP_DosR" name="k_IRSiP_DosR" value="177.57692095513" constant="true"/>
+      <parameter id="km2" name="km2" value="1.49338892921658" constant="true"/>
+      <parameter id="km3" name="km3" value="5.19751659489442e-06" constant="true"/>
+      <parameter id="sigmaYDosR" name="sigmaYDosR" value="0.548747399748729" constant="true"/>
+      <parameter id="IRS1_P" name="IRS1_P" value="23.6188870430921" constant="false"/>
+      <parameter id="insulin" name="insulin" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="IRS1_P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> IRSiP </ci>
+            <ci> k_IRSiP_DosR </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="IRS1_PO">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> IRS1_P </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="insulin">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn> 0 </cn>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="v1_v_0" name="v_0" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IR" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRins" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_v_0 </ci>
+                <ci> IR </ci>
+                <ci> insulin </ci>
+                <ci> k1a </ci>
+                <ci> k1aBasic </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v2_v_1" name="v_1" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRins" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IR" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k1b </ci>
+              <ci> IRins </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v3_v_2" name="v_2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRins" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRp" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k1c </ci>
+              <ci> IRins </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v4_v_3" name="v_3" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRiP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k1d </ci>
+              <ci> IRp </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v5_v_4" name="v_4" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRiP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRi" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="XXp"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_v_4 </ci>
+                <ci> IRiP </ci>
+                <ci> XXp </ci>
+                <ci> k1e </ci>
+                <ci> k1f </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v6_v_5" name="v_5" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IR" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k1g </ci>
+              <ci> IRp </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v7_v_6" name="v_6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRi" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IR" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k1r </ci>
+              <ci> IRi </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v8_v_7" name="v_7" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRS" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRSiP" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="IRiP"/>
+          <modifierSpeciesReference species="IRp"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_v_7 </ci>
+                <ci> IRS </ci>
+                <ci> IRiP </ci>
+                <ci> IRp </ci>
+                <ci> k21 </ci>
+                <ci> k22 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v9_v_8" name="v_8" reversible="false">
+        <listOfReactants>
+          <speciesReference species="IRSiP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IRS" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> km2 </ci>
+              <ci> IRSiP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v10_v_9" name="v_9" reversible="false">
+        <listOfReactants>
+          <speciesReference species="XX" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="XXp" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="IRSiP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_v_9 </ci>
+                <ci> IRSiP </ci>
+                <ci> XX </ci>
+                <ci> k3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="v11_v_10" name="v_10" reversible="false">
+        <listOfReactants>
+          <speciesReference species="XXp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="XX" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> km3 </ci>
+              <ci> XXp </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
