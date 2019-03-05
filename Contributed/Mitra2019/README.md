@@ -7,7 +7,7 @@ This folder contains 31 example fitting problems configured for PyBioNetFit.
 ## Files
 * [problems.xls](problems.xls) - Summary of all included fitting problems
 
-Each folder contains files associated with one fitting problem, including a README.rtf describing the problem and methods. The folder includes all model (.bngl / .xml) and data (.exp / .prop) files, and one configuration (.conf) file for each algorithm run on that problem. It also contains example output (best fit parameters and model file) for each algorithm.
+Each folder contains files associated with one fitting problem, including a README.rtf describing the problem and methods. README.rtf files should be viewed offline in a word processor. The folder includes all model (.bngl / .xml) and data (.exp / .prop) files, and one configuration (.conf) file for each algorithm run on that problem. It also contains example output (best fit parameters and model file) for each algorithm.
 
 Additional analysis was done on some of the examples. Such analysis is noted in problems.xls.
 
