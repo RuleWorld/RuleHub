@@ -490,7 +490,7 @@ simulate({suffix=>"std_scaling",method=>"ssa",print_CDAT=>0,t_start=>0,t_end=>86
 #  - Results are shown in Fig. 3(b), (d), (f) and (h).
 resetParameters()
 resetConcentrations()
-simulate({suffix=>"partial_scaling",method=>"ssa",scalelevel=>300,print_CDAT=>0,\
+simulate({suffix=>"partial_scaling",method=>"ssa",poplevel=>300,print_CDAT=>0,\
           t_start=>0,t_end=>8640,n_steps=>1000})
 
 end actions
