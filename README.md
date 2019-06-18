@@ -5,6 +5,7 @@ Model name| Description
 [Faeder2003](Published/Faeder2003)  | Model of early events in FcεRI signaling, including Lyn recruitment and Syk activation. 
 [Mitra2019](Published/Mitra2019) | Suite of benchmark parameter fitting problems for PyBioNetFit
 [Thomas2016](Published/Thomas2016) | Parameter fitting problems published with BioNetFit v1.0
+[Salazar-Cavazos2019](Published/Salazar-Cavazos2019) | Model of EGFR signaling fit to Single Molecule Pull-down (SiMPull) data
 
 ## Contributed models
 Model name| Description
