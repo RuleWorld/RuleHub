@@ -1,0 +1,5 @@
+degranulation > p3_60.degranulation_low at time=5 pmin 0.01 pmax 0.98 tolerance 14000.0
+degranulation < p3_60.degranulation_high at time=5 pmin 0.01 pmax 0.98 tolerance 14000.0
+degranulation < p3_120.degranulation_low at time=5 pmin 0.01 pmax 0.98 tolerance 14000.0
+degranulation < p3_180.degranulation_low at time=5 pmin 0.01 pmax 0.98 tolerance 14000.0
+degranulation < p3_240.degranulation_low at time=5 pmin 0.01 pmax 0.98 tolerance 14000.0

@@ -1,0 +1,4 @@
+degranulation > p3_60.degranulation at time=5 confidence 0.98 tolerance 14000.0
+degranulation < p3_120.degranulation at time=5 confidence 0.98 tolerance 14000.0
+degranulation < p3_180.degranulation at time=5 confidence 0.98 tolerance 14000.0
+degranulation < p3_240.degranulation at time=5 confidence 0.98 tolerance 14000.0
