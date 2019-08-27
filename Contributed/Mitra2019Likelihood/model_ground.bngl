@@ -1,18 +1,15 @@
-# filename: model.bngl
-# date of last edit: 25-Jul-2017
+# filename: model_ground.bngl
+# date of last edit: 27-Aug-2019
 # authors: Chylek LA, Mitra E, Hlavacek WS (Los Alamos National Laboratory)
-# software compatibility: RuleBender (version 2.1.0.8), 
-# BioNetGen (version 2.2.6)
+# software compatibility: BioNetGen (version 2.2.6)
 
 begin model
 
 begin parameters
 
 # The following parameters were fit to experimental degranulation data using
-# BioNetFit 1.0
-# For more information, see the BioNetFit configuration file model_fit.conf
-
-# begin fit parameters
+# BioNetFit 1.0 in the study of Harmon et al. (2017)
+# Here we take them to be the ground truth.
 
 X_tot__FREE 6.13331088e+00
 k_Xoff__FREE 1.91394890e-06
@@ -30,8 +27,6 @@ kp_x__FREE 7.81553987e+05
 kpten__FREE 0.00995093271320638
 ksynth1__FREE 1.84930114e-02
 pase__FREE 1.60206452e-01
-
-# end fit parameters
 
 # system size scaling factor (>0)
 f 1 # cells per reaction compartment
@@ -353,9 +348,6 @@ generate_network({overwrite=>1})
 
 # For the purposes of fitting to experimental data, we repeat the series of 3
 # simulations for each time delay that was tested experimentally
-# For each one, a .exp file was saved containing the appropriate experimental
-# data point from Fig. 4
-# BioNetFit was used to fit the model to the .exp files.
 
 # first 5-min period of multivalent antigen stimulation
 setConcentration("Ag(DNP)","Ag_tot_1") 
@@ -363,6 +355,9 @@ simulate({suffix=>"p1_5",method=>"ode",t_end=>5,n_steps=>50,print_functions=>1})
 # Remember these concentrations, so we can go back for each interval tested
 saveConcentrations() 
 
-# ACTIONS HERE: Paste one or more copies of action_clip.bngl below
+# ACTIONS HERE:
+# For each version of the fitting problem, additional actions were added here to simulate the secondary degranulation
+# for each time delay of interest. 
+# See subdirectories.
 
 end actions
