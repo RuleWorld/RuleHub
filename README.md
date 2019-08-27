@@ -12,6 +12,7 @@ Model name| Description
 --------- | ---------
 [Hlavacek2018Egg](Contributed/Hlavacek2018Egg) | Benchmark parameter fitting problem consisting of a simple egg-shaped curve.
 [Hlavacek2018Elephant](Contributed/Hlavacek2018Elephant)  | Benchmark parameter fitting problem consisting of an elephant-shaped curve.
+[Mitra2019Likelihood](Contributed/Mitra2019Likelihood) | Model of IgE-mediated degranulation configured to demonstrate performing Bayesian uncertainty quantification with qualitative data in PyBioNetFit. 
 
 
 For instructions on adding new models to the repo, see [AddingModels.md](AddingModels.md).
